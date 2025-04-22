@@ -101,7 +101,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjc-jx-aOW">
-                                <rect key="frame" x="166" y="505" width="61" height="35"/>
+                                <rect key="frame" x="155" y="405" width="83" height="35"/>
                                 <color key="tintColor" red="0.83782237770000001" green="0.160956345" blue="0.1504582965" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Save"/>
@@ -110,7 +110,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Is6-z2-flh">
-                                <rect key="frame" x="10" y="422" width="373" height="34"/>
+                                <rect key="frame" x="15" y="355" width="363" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -121,14 +121,14 @@
                         <viewLayoutGuide key="safeArea" id="a1l-Sy-CzT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="a1l-Sy-CzT" firstAttribute="trailing" secondItem="Is6-z2-flh" secondAttribute="trailing" constant="10" id="9fM-Gi-HgG"/>
-                            <constraint firstItem="a1l-Sy-CzT" firstAttribute="trailing" secondItem="yjc-jx-aOW" secondAttribute="trailing" constant="166" id="A73-Ce-G1e"/>
-                            <constraint firstItem="Is6-z2-flh" firstAttribute="leading" secondItem="a1l-Sy-CzT" secondAttribute="leading" constant="10" id="S0m-P8-aE0"/>
-                            <constraint firstItem="Is6-z2-flh" firstAttribute="top" secondItem="a1l-Sy-CzT" secondAttribute="top" constant="267" id="VgQ-eA-uRj"/>
-                            <constraint firstItem="yjc-jx-aOW" firstAttribute="centerX" secondItem="Utt-Ja-maU" secondAttribute="centerX" id="gYB-nd-6hF"/>
-                            <constraint firstItem="Is6-z2-flh" firstAttribute="centerX" secondItem="Utt-Ja-maU" secondAttribute="centerX" id="hQs-Zh-Dlh"/>
-                            <constraint firstItem="yjc-jx-aOW" firstAttribute="leading" secondItem="a1l-Sy-CzT" secondAttribute="leading" constant="166" id="k43-WV-1Yx"/>
-                            <constraint firstItem="yjc-jx-aOW" firstAttribute="top" secondItem="Is6-z2-flh" secondAttribute="bottom" constant="49" id="oqT-mR-Cys"/>
+                            <constraint firstItem="yjc-jx-aOW" firstAttribute="top" secondItem="Is6-z2-flh" secondAttribute="bottom" constant="16" id="347-e0-M5g"/>
+                            <constraint firstItem="Is6-z2-flh" firstAttribute="centerX" secondItem="Utt-Ja-maU" secondAttribute="centerX" id="3SI-S6-Shj"/>
+                            <constraint firstItem="Is6-z2-flh" firstAttribute="top" secondItem="a1l-Sy-CzT" secondAttribute="top" constant="200" id="66I-lc-Bcd"/>
+                            <constraint firstItem="a1l-Sy-CzT" firstAttribute="trailing" secondItem="yjc-jx-aOW" secondAttribute="trailing" constant="155" id="Lu0-Uc-eqP"/>
+                            <constraint firstItem="yjc-jx-aOW" firstAttribute="leading" secondItem="a1l-Sy-CzT" secondAttribute="leading" constant="155" id="NcJ-us-a0l"/>
+                            <constraint firstItem="a1l-Sy-CzT" firstAttribute="trailing" secondItem="Is6-z2-flh" secondAttribute="trailing" constant="15" id="YDd-XB-pbz"/>
+                            <constraint firstItem="yjc-jx-aOW" firstAttribute="centerX" secondItem="Utt-Ja-maU" secondAttribute="centerX" id="uyo-VA-QvM"/>
+                            <constraint firstItem="Is6-z2-flh" firstAttribute="leading" secondItem="a1l-Sy-CzT" secondAttribute="leading" constant="15" id="vj3-4i-wI8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="M8S-kC-1yM"/>

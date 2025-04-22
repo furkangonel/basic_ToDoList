@@ -6,7 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8CABD73F2DB81CE400C9746B /* FMDB in Frameworks */ = {isa = PBXBuildFile; productRef = 8CABD73E2DB81CE400C9746B /* FMDB */; };
+		8CABD8072DB84C7500C9746B /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8CABD8062DB84C7500C9746B /* RxSwift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		8CABD73C2DB81C3700C9746B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		8CD1B9012DB33A03001F23CF /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -36,16 +42,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CABD8072DB84C7500C9746B /* RxSwift in Frameworks */,
+				8CABD73F2DB81CE400C9746B /* FMDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8CABD73B2DB81C3700C9746B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8CABD73C2DB81C3700C9746B /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8CD1B8F82DB33A03001F23CF = {
 			isa = PBXGroup;
 			children = (
 				8CD1B9032DB33A03001F23CF /* ToDoList */,
+				8CABD73B2DB81C3700C9746B /* Frameworks */,
 				8CD1B9022DB33A03001F23CF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,6 +95,8 @@
 			);
 			name = ToDoList;
 			packageProductDependencies = (
+				8CABD73E2DB81CE400C9746B /* FMDB */,
+				8CABD8062DB84C7500C9746B /* RxSwift */,
 			);
 			productName = ToDoList;
 			productReference = 8CD1B9012DB33A03001F23CF /* ToDoList.app */;
@@ -107,6 +126,10 @@
 			);
 			mainGroup = 8CD1B8F82DB33A03001F23CF;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				8CABD73D2DB81CE400C9746B /* XCRemoteSwiftPackageReference "fmdb" */,
+				8CABD8052DB84C7500C9746B /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8CD1B9022DB33A03001F23CF /* Products */;
 			projectDirPath = "";
@@ -335,6 +358,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8CABD73D2DB81CE400C9746B /* XCRemoteSwiftPackageReference "fmdb" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ccgus/fmdb";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.12;
+			};
+		};
+		8CABD8052DB84C7500C9746B /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8CABD73E2DB81CE400C9746B /* FMDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8CABD73D2DB81CE400C9746B /* XCRemoteSwiftPackageReference "fmdb" */;
+			productName = FMDB;
+		};
+		8CABD8062DB84C7500C9746B /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8CABD8052DB84C7500C9746B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8CD1B8F92DB33A03001F23CF /* Project object */;
 }

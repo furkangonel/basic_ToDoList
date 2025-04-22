@@ -14,13 +14,11 @@ class ToDos {
     
     
     init () {
-        print("Non-parameters constructor runned!")
     }
     
     init (id: Int, name: String) {
         self.id = id        // Shadowing denilir.
         self.name = name
         
-        print("Parameterized constructor runned! --> \(id), \(name)")
     }
 }

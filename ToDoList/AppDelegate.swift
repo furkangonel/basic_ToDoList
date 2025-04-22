@@ -13,7 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        copyDatabaseIfNeeded()
+        
         return true
     }
 
@@ -31,6 +33,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    
+    
+    func copyDatabaseIfNeeded() {
+        let bundlePath = Bundle.main.path(forResource: "todo_app", ofType: "sqlite")!
+        let targetPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        let fileManager = FileManager.default
+        let fullTargetPath = (targetPath as NSString).appendingPathComponent("todo_app.sqlite")
+
+        if !fileManager.fileExists(atPath: fullTargetPath) {
+            do {
+                try fileManager.copyItem(atPath: bundlePath, toPath: fullTargetPath)
+                print("Veritabanı kopyalandı ✅")
+            } catch {
+                print("Kopyalama hatası: \(error.localizedDescription)")
+            }
+        } else {
+            print("Database already exists")
+        }
+    }
 
 }
 

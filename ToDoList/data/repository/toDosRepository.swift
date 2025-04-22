@@ -19,7 +19,7 @@ class ToDosRepository {
     
     init() {
         let targetPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
-        let databasePath = URL(fileURLWithPath: targetPath).appendingPathComponent("todo_app.splite")
+        let databasePath = URL(fileURLWithPath: targetPath).appendingPathComponent("todo_app.sqlite")
         db = FMDatabase(path: databasePath.path)
     }
     

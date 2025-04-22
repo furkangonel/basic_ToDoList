@@ -11,8 +11,8 @@ class DetailVC: UIViewController {
 
     
     @IBOutlet weak var nameText: UITextField!
-    
     var toDo: ToDos?
+    var detailViewmodel = DetailViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,13 +25,10 @@ class DetailVC: UIViewController {
     
     @IBAction func updateButtonClicked(_ sender: Any) {
         if let name = nameText.text, let tempToDo = toDo {
-                update(name: name)
+            detailViewmodel.update(id: tempToDo.id!, name: name)
+            
+            self.navigationController?.popViewController(animated: true)
         }
-    }
-    
-    
-    func update(name: String) {
-        print("Update todo: \(name)")
     }
     
 

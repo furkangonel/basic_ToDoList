@@ -11,12 +11,11 @@ class SaveVC: UIViewController {
     
     
     @IBOutlet weak var nameText: UITextField!
-    
+    var saveViewModel = SaveViewModel()
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     
@@ -24,15 +23,15 @@ class SaveVC: UIViewController {
     @IBAction func saveButtonClicked(_ sender: Any) {
         
         if let name = nameText.text {
-            save(name: name)
+            
+            saveViewModel.save(name: name)
+            
+            self.navigationController?.popViewController(animated: true)
+            
         }
     }
     
-    
-    func save(name: String) {
-        print("Save todo: \(name)")
-    }
-    
+
 
 
 }
